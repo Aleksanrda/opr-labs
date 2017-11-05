@@ -5,7 +5,6 @@ function getFraction(numerator, denumerator) {
     let fraction = [];
 
     for (let i = 0; i < numerator.length; i++) {
-
         for (let j = 0; j < denumerator.length; j++) {
             let firstCheckNumeratorForAnInteger = Number.isInteger(numerator[i] / 2);
             let firstCheckDenumeratorForAnInteger = Number.isInteger(denumerator[j] / 2);
@@ -25,6 +24,6 @@ function getFraction(numerator, denumerator) {
     return fraction;
 }
 
-var result = getFraction(numerator, denumerator);
+let result = getFraction(numerator, denumerator);
 
 alert(result);

@@ -1,13 +1,18 @@
-debugger;
-var k = 876
-function findNumeric(k) {
+let number = 857;
+
+function findNumeric(number) {
+    number = number.toString().split("");
     let a = 7;
-    k.split();
-    for (let i = 0; i < k.length; i++) {
-        if (a == k[i]) {
-            alert(a);
+
+    for (let i = 0; i < number.length; i++) {
+        if (a == number[i]) {
+            return a;
         }
     }
-    return (undefined);
+
+    return undefined;
 }
-alert(findNumeric(k));
+
+alert(findNumeric(number));
+
+
