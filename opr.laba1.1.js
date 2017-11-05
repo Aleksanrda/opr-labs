@@ -1,32 +1,26 @@
-var x = 123;
-x.toString()
-var res = [];
-var i = 0;
+function getInputNumbers() {
+    let numbers = [];
 
-while(x > 0){
-    var number = x % 10
-    var x = parseInt(x / 10);
-    res[i] = number
-    i++
+    for (let i = 0; i < 8; i++) {
+        numbers[i] = parseInt(prompt('Enter your number:'));
+    }
+    
+    return numbers;
 }
 
-console.log(res);
+function getPositiveCountNumber(numbers) {
+    let positiveCountNumber = 0;
 
-// function inputNumbers() {
-//     let numbers = [];
-//     for (let i = 0; i < 8; i++) {
-//         numbers[i] = parseInt(prompt('Enter your number:'));
-//     }
-//     return (numbers);
-// }
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] >= 0) {
+            positiveCountNumber++;
+        }
+    }
 
-// function positiveCountNumber() {
-//     let positiveCountNumber = 0;
-//     for (let j = 0; j < numbers.length; j++) {
-//         if (numbers[j] >= 0) {
-//             positiveCountNumber++;
-//         }
-//     }
-// }
+    return positiveCountNumber;
+}
 
-// console.log(positiveCountNumber(inputNumbers()));
+let usersInput = getInputNumbers();
+let result = getPositiveCountNumber(usersInput);
+
+console.log(result);
