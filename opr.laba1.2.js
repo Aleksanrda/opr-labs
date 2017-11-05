@@ -1,11 +1,9 @@
-debugger;
-
-function inputNumber() {
+function getInputNumber() {
     let number = parseInt(prompt('Enter your number:'))
     return number;
 }
 
-function calculateSumOfPows() {
+function calculateSumOfPows(number) {
     let xsum = 0;
     let coef = 1;
 
@@ -17,4 +15,7 @@ function calculateSumOfPows() {
     return xsum;
 }
 
-alert(calculateSumOfPows(inputNumber()));
+var usersInput = getInputNumber();
+var result = calculateSumOfPows(usersInput);
+
+alert(result);

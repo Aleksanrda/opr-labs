@@ -4,7 +4,7 @@ function getInputNumbers() {
     for (let i = 0; i < 8; i++) {
         numbers[i] = parseInt(prompt('Enter your number:'));
     }
-    
+
     return numbers;
 }
 
@@ -20,7 +20,7 @@ function getPositiveCountNumber(numbers) {
     return positiveCountNumber;
 }
 
-let usersInput = getInputNumbers();
-let result = getPositiveCountNumber(usersInput);
+var usersInput = getInputNumbers();
+var result = getPositiveCountNumber(usersInput);
 
-console.log(result);
+alert(result);
