@@ -17,5 +17,4 @@ function calculateSumOfPows(number) {
 
 var usersInput = getInputNumber();
 var result = calculateSumOfPows(usersInput);
-
 alert(result);
