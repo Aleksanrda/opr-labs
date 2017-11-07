@@ -1,18 +1,15 @@
 let number = 857;
-
-function findNumeric(number) {
-    number = number.toString().split("");
-    let a = 7;
+let numeric = 7;
+function findNumeric(number, numeric) {
+    number = number.toString();
 
     for (let i = 0; i < number.length; i++) {
-        if (a == number[i]) {
-            return a;
+        if (numeric == number[i]) {
+            return numeric;
         }
     }
 
     return undefined;
 }
 
-alert(findNumeric(number));
-
-
+alert(findNumeric(number, numeric));

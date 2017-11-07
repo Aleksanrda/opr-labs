@@ -1,12 +1,12 @@
 let number = 313;
-function palindrom(number) {
-    let firstString = number.toString().split("").reverse().join("");
-    secondString = number.toString();
-
-    if (secondString === secondString.substr(0) && secondString === firstString) {
+function getPalindrom(number) {
+    let firstString = number.toString();
+    let secondString = number.toString().split("").reverse().join("");
+    
+    if (firstString === firstString.substr(0) && firstString === secondString) {
         return number;
     }
 
     return undefined;
 }
-alert(palindrom(number));
+alert(getPalindrom(number));
