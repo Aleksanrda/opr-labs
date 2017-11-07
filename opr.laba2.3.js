@@ -1,4 +1,5 @@
 let number = 313;
+
 function getPalindrom(number) {
     let firstString = number.toString();
     let secondString = number.toString().split("").reverse().join("");
@@ -9,4 +10,5 @@ function getPalindrom(number) {
 
     return undefined;
 }
+
 alert(getPalindrom(number));
