@@ -6,14 +6,29 @@ function getInputNumber() {
 }
 
 function getPalindrom(number) {
-    let firstString = number.toString();
-    let secondString = number.toString().split("").reverse().join("");
+    let firstPalindromNumber = number;
+    let secondPalindromNumber = number;
+    let firstString = firstPalindromNumber.toString().split("");
+    let secondString = secondPalindromNumber.toString().split("");
 
-    if (firstString === firstString.substr(0) && firstString === secondString) {
-        return "Number is a palindrome";
+    if (isNaN(firstPalindromNumber)) {
+        return undefined;
     }
 
-    return "Number is not a palindrome";
+    for (let i = 0; i < secondString.length / 2; i++) {
+        [secondString[i], secondString[(secondString.length - 1) - i]] = [secondString[(secondString.length - 1) - i], secondString[i]]
+    }
+
+    for (let j = 0; j < firstString.length;) {
+        if (firstString[j] === secondString[j]) {
+            j++;
+        }
+        else {
+            return "Number is not a palindrome";
+        }
+    }
+
+    return "Number is  a palindrome";
 }
 
 let usersInput = getInputNumber();
