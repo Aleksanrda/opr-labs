@@ -1,18 +1,17 @@
-// let number = 857;
-// let numeric = 7;
-
 function getInputnumeric() {
-    let numeric = parseInt(prompt('Enter your numeric:'))
-    return numeric;
+    let inputNumeric = parseInt(prompt('Enter your numeric:'))
+    return inputNumeric;
 }
 
 function getInputNumber() {
-    let number = parseInt(prompt('Enter your number:'))
-    return number;
+    let inputNumber = parseInt(prompt('Enter your number:'))
+    return inputNumber;
 }
 
-function findNumeric(number, numeric) {
+function findNumeric(inputNumber, inputNumeric) {
+    let number = inputNumber;
     number = number.toString();
+    let numeric = inputNumeric;
 
     for (let i = 0; i < number.length; i++) {
         if (numeric == number[i]) {
@@ -23,8 +22,8 @@ function findNumeric(number, numeric) {
     return undefined;
 }
 
-var firstUsersInput = getInputNumber();
-var secondUsersInput = getInputnumeric();
-var result = findNumeric(firstUsersInput, secondUsersInput);
+let firstUsersInput = getInputNumber();
+let secondUsersInput = getInputnumeric();
+let result = findNumeric(firstUsersInput, secondUsersInput);
 
 alert(result);
