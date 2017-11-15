@@ -1,3 +1,4 @@
+// debugger;
 function getInputNumbers() {
     let numbers = [];
 
@@ -12,7 +13,7 @@ function getPositiveCountNumber(numbers) {
     let positiveCountNumber = 0;
 
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] >= 0) {
+        if (numbers[i] >= 0 && numbers[i] %3 == 0) {
             positiveCountNumber++;
         }
     }

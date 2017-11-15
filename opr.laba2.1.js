@@ -1,9 +1,9 @@
-var numerator = [1, 2, 3, 4, 5, 6];
-var denumerator = [2, 3, 4, 5, 6, 7];
+let numerator = [1, 2, 3, 4, 5, 6];
+let denumerator = [2, 3, 4, 5, 6, 7];
 
 function getFraction(numerator, denumerator) {
     let fraction = [];
-
+    
     for (let i = 0; i < numerator.length; i++) {
         for (let j = 0; j < denumerator.length; j++) {
             let firstCheckNumeratorForAnInteger = Number.isInteger(numerator[i] / 2);

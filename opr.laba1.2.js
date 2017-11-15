@@ -1,3 +1,4 @@
+// debugger;
 function getInputNumber() {
     let number = parseInt(prompt('Enter your number:'))
     return number;

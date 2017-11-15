@@ -1,4 +1,9 @@
-let number = 4564765;
+// let number = 4564765;
+
+function getInputNumber() {
+    let number = parseInt(prompt('Enter your number:'))
+    return number;
+}
 
 function getCountOfNumeric(number) {
     let numeric = number.toString().split("");
@@ -19,7 +24,10 @@ function getCountOfNumeric(number) {
 
         delete numeric[i];
     }
-    return countOfNumeric;
+    return "Count of numeric:" + countOfNumeric;
 }
 
-alert(getCountOfNumeric(number));
+let usersInput = getInputNumber();
+let result = getCountOfNumeric(usersInput);
+
+alert(result);
