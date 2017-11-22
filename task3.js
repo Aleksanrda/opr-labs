@@ -3,15 +3,14 @@ let commas = getCommas(".gkuh.kh.iyh.")
 
 function getCommas(s) {
     let string = s;
+    string = string.split("");
     let firstPosition = string.indexOf(".");
     let secondPosition = string.lastIndexOf(".");
-
-
-    string = string.replace(/./g, ",").split("");
     for (let i = 0; i < string.length; i++) {
 
-        if (firstPosition === i || secondPosition === i) {
-            string.replace(".", ",")
+
+        if (string[i] == "." && firstPosition !== i && secondPosition !== i) {
+            string = string.replace(".", ",")
         }
 
     }
